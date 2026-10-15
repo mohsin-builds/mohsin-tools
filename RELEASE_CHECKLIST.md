@@ -1,0 +1,11 @@
+# Release checklist — Concept C v0.6
+- [x] Approved Concept C palette and layout implemented
+- [x] Same visual system on three utility pages and privacy page
+- [x] Existing processing module preserved
+- [x] Unit tests passed
+- [x] Offline Chromium functional/browser tests passed
+- [x] Mobile layout tested for horizontal overflow
+- [x] Static production build and internal link check passed
+- [ ] Cloudflare Production deployment (user action required)
+- [ ] Live HTTP/module and full functional smoke test
+- [ ] Visual approval on the live custom domain
