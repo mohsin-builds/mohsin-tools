@@ -31,3 +31,8 @@ Open the **existing** `mohsin-tools-app` Cloudflare Pages project, select **Crea
 
 ## Privacy & dependencies
 Browser files are processed in-device. Manrope is optionally loaded from Google Fonts (with local system fallbacks) and may make a font request. No account, server-side image processing, database, paid API, or tracker is required.
+
+
+## v1.0: 26-tool candidate
+
+Expanded from three image tools to 26 independent browser-based utilities. New tool pages live under `tools/` and use `assets/extra-tools.js`. No new API, database or payment integration. Tests and production deployment must be approved before publication. Some page behavior relies on modern browser Canvas, Crypto and File APIs.

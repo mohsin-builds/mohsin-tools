@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://tools.mohsinlabs.com/</loc></url>
-<url><loc>https://tools.mohsinlabs.com/tools/compress-image.html</loc></url>
-<url><loc>https://tools.mohsinlabs.com/tools/photo-signature-resizer.html</loc></url>
-<url><loc>https://tools.mohsinlabs.com/tools/image-converter.html</loc></url>
-<url><loc>https://tools.mohsinlabs.com/privacy.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/privacy.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/compress-image.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/photo-signature-resizer.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/image-converter.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/image-cropper.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/bulk-image-resizer.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/images-to-pdf.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/social-image-resizer.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/favicon-maker.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/image-color-picker.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/image-info.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/word-counter.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/case-converter.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/text-cleaner.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/duplicate-line-remover.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/text-compare.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/slug-generator.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/json-formatter.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/csv-to-json.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/base64-text.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/url-encoder.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/html-escape.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/color-converter.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/password-generator.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/uuid-generator.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/percentage-calculator.html</loc></url>
+  <url><loc>https://tools.mohsinlabs.com/tools/unit-converter.html</loc></url>
 </urlset>

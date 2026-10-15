@@ -11,7 +11,7 @@ class Links(HTMLParser):
    if k in d:self.urls.append((tag,d[k]))
 assert (root/'index.html').exists()
 pages=list(root.rglob('*.html'))
-assert len(pages)==5,(len(pages),pages)
+assert len(pages)==28,(len(pages),pages)
 for page in pages:
  p=Links();p.feed(page.read_text(encoding='utf-8'))
  for tag,raw in p.urls:

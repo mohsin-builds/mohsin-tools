@@ -1,4 +1,4 @@
-name: Validate static MVP
+name: Validate Mohsin Tools release
 on:
   push:
     branches: [main]
@@ -16,6 +16,8 @@ jobs:
           node-version: '22'
       - name: Unit tests
         run: node tests/unit.mjs
+      - name: Validate tool directory
+        run: node tests/directory.mjs
       - name: Build static output
         run: node scripts/build.mjs
       - name: Static output validation
