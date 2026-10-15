@@ -13,3 +13,16 @@ Research/development date: 2026-10-15
 - New tools avoid `fetch`, XMLHttpRequest and sendBeacon; note the automatic Cloudflare analytics beacon separately reports site usage as described in the Privacy page.
 - Unknown: search demand, user adoption, production browser compatibility, and real traffic. None claimed.
 - These artifacts are release candidates; no new production deployment or GitHub push has been made.
+
+## SEO improvement audit — 2026-10-16
+- [x] 26 distinct tool URLs, descriptive titles, meta descriptions, canonical URLs, unique H1 and visible HTML.
+- [x] Tailored tool descriptions, usage examples, limitations, and related tool links.
+- [x] WebSite + ItemList JSON-LD for homepage; WebApplication + BreadcrumbList for each of 26 tools.
+- [x] New 1200×630 social preview; OG and Twitter/X cards on indexable pages.
+- [x] XML sitemap with 28 URLs and a truthful 2026-10-16 last modified date for revised pages.
+- [x] SEO validation script added to CI; existing functionality tested offline.
+- [ ] Post-deployment HTTP checks for metadata, sitemap, JS modules and key tools.
+- [ ] Search Console property verified and sitemap submitted (account holder action).
+- [ ] Real indexing/ranking positions observed in Search Console (not yet known).
+
+No ranking, crawl frequency or traffic volume is claimed.

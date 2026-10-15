@@ -1,38 +1,48 @@
-# Mohsin Tools — Concept C release candidate v0.6
+# Mohsin Tools — v1.0 (26 free browser tools)
 
-This is the approved **Concept C — Modern Creative** visual direction, implemented as an independent static site for the existing Cloudflare Pages project `mohsin-tools-app` at `tools.mohsinlabs.com`.
+A standalone, privacy-conscious collection of free, browser-based image, PDF, text, developer and everyday utilities. Built by Mohsin Labs and hosted independently on Cloudflare Pages.
 
-## Visual specification
-- Brand: Mohsin Tools by Mohsin Labs
-- Typeface: Manrope (with system fallbacks), matching the Satoshi / Manrope / Inter family referenced by Concept C
-- Canvas: mostly white with violet, magenta and sky-blue gradient accents
-- Hero: left-aligned “Turn images into progress.” headline, two CTAs, decorative angled mountain-preview device with floating action chips
-- Four-item utility benefit strip, three pastel tool cards, large lavender benefits panel and minimal footer
-- Consistent matching headers, tool-page controls and privacy page
+**Public product:** https://tools.mohsinlabs.com/
 
-The illustration inside the tilted device is a locally stored SVG alpine illustration. This maintains the concept's composition without depending on an externally hosted image or embedding a low-resolution piece of the concept screenshot.
+## Product architecture
 
-## Existing features preserved
-1. Image compressor with user-specified KB ceiling and honest failure message when the target cannot be met.
-2. Photo and signature resizer with exact-size export, high-resolution signature master, lossless PNG option and zoom inspector.
-3. Local JPG, PNG and WebP converter.
+- **Independent repository:** `mohsin-builds/mohsin-tools`, separate from Mohsin Labs OS.
+- **Static frontend:** HTML, CSS, JavaScript, Canvas, File and Crypto APIs.
+- **Hosting:** Existing Cloudflare Pages project `mohsin-tools-app` (manual ZIP upload).
+- **Data:** Selected image and text files are processed locally; Cloudflare Web Analytics observes page usage, not user-selected image contents.
+- **Design:** User-approved Concept C — light neutral canvas and restrained purple/blue gradient accents.
 
-## Run checks
+## Tools
+
+The directory has 26 dedicated pages grouped into Image & PDF (10), Text & Writing (6), Developer (6), and Everyday (4). The three original image processing tools remain intact.
+
+## SEO and accessibility
+
+- Dedicated pages with unique, descriptive `<title>`, meta descriptions and H1 headings.
+- Tool-specific usage instructions, practical examples and realistic limitations rather than generic repeated copy.
+- Canonical URLs on `tools.mohsinlabs.com`; robots.txt and sitemap.xml for discovery.
+- JSON-LD for WebSite/ItemList on the homepage and WebApplication/BreadcrumbList on utility pages, with truthful `price: 0` and no fabricated review data.
+- Crawlable links and related-tool navigation, with semantic content in the initial HTML.
+- Static optimized social preview asset; no backend SEO or indexing API required.
+
+These changes improve crawlability and explain the product, but **do not guarantee rankings or indexing**. Google Search Console domain verification and sitemap submission must be completed from the authorized Google account.
+
+## Local checks
+
 ```bash
-node scripts/build.mjs
 node tests/unit.mjs
-python tests/static_check.py
-python tests/browser_offline.py
+node tests/directory.mjs
+node tests/seo.mjs
+node scripts/build.mjs
+python3 tests/static_check.py
 ```
-Browser-offline tests exercise actual Canvas output and downloads, not the production HTTP module-loading path.
 
-## Deploy (requires Cloudflare dashboard access)
-Open the **existing** `mohsin-tools-app` Cloudflare Pages project, select **Create deployment**, select Production and upload the Cloudflare ZIP containing the prebuilt root assets. Do **not** create a new project or change DNS. Check `/`, the three `/tools/*.html` pages and `/privacy.html` after deployment, preferably in Incognito.
+Optional offline Chromium suite: `python3 tests/browser_v1_offline.py` (requires Chromium, Playwright, PIL and PyMuPDF). Full deployed HTTP and SSL checks must be performed on production after release.
 
-## Privacy & dependencies
-Browser files are processed in-device. Manrope is optionally loaded from Google Fonts (with local system fallbacks) and may make a font request. No account, server-side image processing, database, paid API, or tracker is required.
+## Deploy
 
+Upload the prepared **Cloudflare production ZIP** as a new deployment to the existing `mohsin-tools-app` Pages project. Do not change DNS or create a second project. Browser-check several real tools, the sitemap, and Web Analytics after deployment.
 
-## v1.0: 26-tool candidate
+## Limitations
 
-Expanded from three image tools to 26 independent browser-based utilities. New tool pages live under `tools/` and use `assets/extra-tools.js`. No new API, database or payment integration. Tests and production deployment must be approved before publication. Some page behavior relies on modern browser Canvas, Crypto and File APIs.
+Some tools depend on modern browser support. A 200-pixel signature cannot retain limitless zoom detail; PDF output from selected images does not include OCR. UUID v4 requires a secure browsing context (HTTPS). Follow receiving websites' actual size and format requirements before submitting generated files.

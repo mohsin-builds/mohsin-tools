@@ -18,6 +18,8 @@ jobs:
         run: node tests/unit.mjs
       - name: Validate tool directory
         run: node tests/directory.mjs
+      - name: SEO metadata and sitemap validation
+        run: node tests/seo.mjs
       - name: Build static output
         run: node scripts/build.mjs
       - name: Static output validation
